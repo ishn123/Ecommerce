@@ -1,0 +1,5 @@
+we will use persist so that if the customer when leaves the site then also the contents in the cart 
+will be stored in local storage
+it is just a more enhanced code on redux.
+strapi core routers
+custom routes and controller
