@@ -13,7 +13,7 @@ function Home() {
 
     async function fetchData() {
         const topProductsResponse = await axiosClient.get(
-            "/products?filters[isTopPick][$eq]=true&populate=image"
+            "https://starpi-live-service.onrender.com/api/products?filters[isTopPick][$eq]=true&populate=image"
         );
 
         setTopProducts(topProductsResponse.data.data);
