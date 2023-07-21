@@ -13,7 +13,7 @@ function SearchBar() {
   }, [search]);
 
   async function fetchnew() {
-    const url = `/products?filters[title][$containsi]=${search}&populate=*`;
+    const url = `https://starpi-live-service.onrender.com/api/products?filters[title][$containsi]=${search}&populate=*`;
     const response = await axiosClient.get(url);
     setProducts(response.data.data);
   }
