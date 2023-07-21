@@ -13,7 +13,7 @@ function Collection({ search }) {
   const [products, setProducts] = useState([]);
 
   async function fetchnew() {
-    const url = `/products?filters[title][$containsi]=${search}&populate=*`;
+    const url = `https://starpi-live-service.onrender.com/api/products?filters[title][$containsi]=${search}&populate=*`;
     const response = await axiosClient.get(url);
     setProducts(response.data.data);
   }
@@ -31,14 +31,18 @@ function Collection({ search }) {
       value: "Newest First",
       sort: "createdAt",
     },
+      {
+      value: "Price - High To Low",
+      sort: "price",
+    },
   ];
 
   const [sortBy, setSortBy] = useState(sortOptions[0].sort);
 
   async function fetchProducts() {
     const url = params.categoryId
-      ? `/products?populate=image&filters[category][key][$eq]=${params.categoryId}&sort=${sortBy}`
-      : `/products?populate=image&sort=${sortBy}`;
+      ? `https://starpi-live-service.onrender.com/api/products?populate=image&filters[category][key][$eq]=${params.categoryId}&sort=${sortBy}`
+      : `https://starpi-live-service.onrender.com/api/products?populate=image&sort=${sortBy}`;
     const response = await axiosClient.get(url);
     setProducts(response.data.data);
   }
