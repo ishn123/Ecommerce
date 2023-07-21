@@ -33,7 +33,7 @@ function Collection({ search }) {
     },
       {
       value: "Price - High To Low",
-      sort: "price",
+      sort: "price:desc",
     },
   ];
 
