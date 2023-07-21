@@ -17,7 +17,7 @@ function ProductDetail() {
 
     async function fetchData() {
         const productResponse = await axiosClient.get(
-            `/products?filters[key][$eq]=${params.productId}&populate=*`
+            `https://starpi-live-service.onrender.com/api/products?filters[key][$eq]=${params.productId}&populate=*`
         );
         if (productResponse.data.data.length > 0) {
             setProduct(productResponse.data.data[0]);
