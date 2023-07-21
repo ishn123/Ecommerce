@@ -31,6 +31,10 @@ function Collection({ search }) {
       value: "Newest First",
       sort: "createdAt",
     },
+      {
+      value: "Price - High To Low",
+      sort: "price",
+    },
   ];
 
   const [sortBy, setSortBy] = useState(sortOptions[0].sort);
