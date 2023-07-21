@@ -17,7 +17,7 @@ function Cart({ onClose }) {
 
     async function handleCheckout() {
         try {
-            const response = await axiosClient.post('/orders', {
+            const response = await axiosClient.post('https://starpi-live-service.onrender.com/api/orders', {
                 products: cart
             });
     
